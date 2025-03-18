@@ -1,4 +1,4 @@
-module internal.home/smtp_traffic
+module go-tcpdump
 
 go 1.22.9
 

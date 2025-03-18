@@ -1,5 +1,5 @@
 {
-	"name": "go-pktdump",
+	"name": "go-tcpdump",
 	"build": {
 		"dockerfile": "Dockerfile",
 		"context": "..",
@@ -15,7 +15,7 @@
 	},
 	"runArgs": [
 		"--init",
-		"--name=go-pktdump"
+		"--name=go-tcpdump"
 	],
 	"customizations": {
 		"vscode": {
