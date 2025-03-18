@@ -12,7 +12,7 @@ import (
 	"github.com/google/gopacket/pcap"
 )
 
-func formatSize(size int) string {
+func convertSize(size int) string {
 	const (
 		_  = iota
 		KB = 1 << (10 * iota)
@@ -93,7 +93,7 @@ func main() {
 				flags[5] = "URG"
 			}
 
-			packetSize := formatSize(packet.Metadata().Length)
+			packetSize := convertSize(packet.Metadata().Length)
 
 			fmt.Printf("Time: %-30s, IPv4: %-15s -> %-15s, TCP: %5d -> %5d, Size: %10s, Seq: %10d, Flags: [%s]\n",
 				timestamp.Format("2006-01-02T15:04:05.000000Z07:00"),
