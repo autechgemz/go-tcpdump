@@ -97,7 +97,14 @@ func main() {
 
 			fmt.Printf("Time: %-30s, IPv4: %-15s -> %-15s, TCP: %5d -> %5d, Size: %10s, Seq: %10d, Flags: [%s]\n",
 				timestamp.Format("2006-01-02T15:04:05.000000Z07:00"),
-				srcIP, dstIP, tcp.SrcPort, tcp.DstPort, packetSize, tcp.Seq, strings.Join(flags, " "))
+				srcIP,
+				dstIP,
+				tcp.SrcPort,
+				tcp.DstPort,
+				packetSize,
+				tcp.Seq,
+				strings.Join(flags, " "),
+			)
 
 			if *payload_debug && len(tcp.Payload) > 0 {
 				fmt.Println("TCP Payload:", string(tcp.Payload))
