@@ -1,0 +1,31 @@
+{
+	"name": "go-pktdump",
+	"build": {
+		"dockerfile": "Dockerfile",
+		"context": "..",
+		"args": {
+			"VARIANT": "1.23-bookworm",
+			"DEV_USER": "vscode"
+		}
+	},
+	"features": {
+		"ghcr.io/devcontainers/features/git:1": {},
+		"ghcr.io/devcontainers/features/github-cli:1": {},
+		"ghcr.io/devcontainers/features/docker-outside-of-docker:1": {}
+	},
+	"runArgs": [
+		"--init",
+		"--name=go-pktdump"
+	],
+	"customizations": {
+		"vscode": {
+			"extensions": [
+				"golang.go"
+			]
+		}
+	},
+	"remoteEnv": {
+		"TZ": "Asia/Tokyo"
+	},
+	"remoteUser": "vscode"
+}
