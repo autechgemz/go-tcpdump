@@ -1,4 +1,4 @@
-# Packet Capture Tool
+# Gotcap 
 
 This program captures packets on a specified network interface and displays TCP packet information.
 
