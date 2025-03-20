@@ -1,4 +1,4 @@
-module go-tcpdump
+module gotcap
 
 go 1.22.9
 
